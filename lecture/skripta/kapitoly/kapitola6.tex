@@ -57,7 +57,7 @@ Nyní začneme tím, že formalizujeme tento koncept ``\emph{modelu}'', tzv. \em
 
 Nejprve specifikujeme, jakého \emph{typu} bude daná struktura, tj. jaké bude mít relace, funkce (jakých arit) a konstanty, a jaké symboly pro ně budeme používat. Této formální specifikaci se někdy říká \emph{typ}, my budeme říkat \emph{signatura}.\footnote{Signaturu si můžete představovat analogicky definici \emph{třídy} v OOP, struktury potom odpovídají \emph{objektům} této třídy (v `programovacím jazyce' teorie množin).} Připomeňme, že \emph{konstanty} můžeme chápat jako funkce arity 0 (tj. funkce bez vstupů).
 
-\begin{definition}
+\begin{definition}[Signatura]
     \emph{Signatura} je dvojice $\langle\mathcal R,\mathcal F\rangle$, kde $\mathcal R,\mathcal F$ jsou disjunktní množiny symbolů (\emph{relační} a \emph{funkční}, ty zahrnují \emph{konstantní}) spolu s danými aritami (tj. danými funkcí $\mathrm{ar}\colon \mathcal R\cup\mathcal F\to\mathbb N$) a neobsahující symbol `$=$' (ten je rezervovaný pro \emph{rovnost}). 
     
 \end{definition}
@@ -559,13 +559,13 @@ $$
 Jak je tomu s pojmem \emph{kompletnosti} teorie?\footnote{Připomeňme, že \emph{výroková} teorie je kompletní, je-li bezesporná a každý výrok v ní buď platí, nebo platí jeho negace. Ekvivalentně, má právě 
 jeden model.}
 
-\begin{definition}
+\begin{definition}[Kompletní teorie]
     Teorie je \emph{kompletní}, je-li bezesporná a každá \emph{sentence} je v ní buď pravdivá, nebo lživá.
 \end{definition}
 
 Nemůžeme ale říci, že je teorie kompletní, právě když má jediný model. Máme-li totiž jeden model, dostáváme z něj nekonečně mnoho jiných, ale \emph{izomorfních} modelů, tj. lišících se jen pojmenováním prvků univerza.\footnote{Formálně pojem \emph{izomorfismu} definujeme později v části o \emph{teorii modelů}, v Sekci \ref{section:isomorphism-of-structures}, jde ale o zobecnění izomorfismu který znáte z teorie grafů.} Uvažovat jediný model `až na izomorfismus' by ale nebylo dostatečné. Správným pojmem je tzv. \emph{elementární ekvivalence}:
 
-\begin{definition}
+\begin{definition}[Elementárně ekvivalentní struktury]
     Struktury $\A,\B$ (v témž jazyce) jsou \emph{elementárně ekvivalentní}, pokud v nich platí tytéž sentence. Značíme $\A\equiv\B$.
 \end{definition}
 
@@ -720,7 +720,7 @@ Jak je tomu s platností formulí v podstruktuře? Uveďme několik jednoduchýc
 
 Co dělat, máme-li podmnožinu univerza, která \emph{není} uzavřená na funkce struktury? V tom případě uvážíme \emph{uzávěr} této množiny na funkce.\footnote{Viz pojem \emph{lineárního obalu} množiny vektorů.}
 
-\begin{definition}
+\begin{definition}[Generovaná podstruktura]
     Mějme strukturu $\A=\langle A,\mathcal R^\mathcal A,\mathcal F^\mathcal A\rangle$ a neprázdnou podmnožinu $X\subseteq A$. Označme jako $B$ nejmenší podmnožinu $A$, která obsahuje množinu $X$ a je uzavřená na všechny funkce struktury $\A$ (tj. také obsahuje všechny konstanty). Potom o podstruktuře $\A\restriction B$ říkáme, že je \emph{generovaná} množinou $X$, a značíme ji $\A\langle X\rangle$.
 \end{definition}
 
@@ -985,7 +985,7 @@ Zkráceně totéž zapíšeme také jako $\varphi^\A(\bar x)=\{\bar a\in A^n\mid
 
 Často se také hodí mluvit o vlastnostech prvků relativně k jiným prvkům dané struktury. To nelze vyjádřit čistě syntakticky, ale můžeme za některé z volných proměnných dosadit prvky struktury jako \emph{parametry}. Zápisem $\varphi(\bar x,\bar y)$ myslíme, že formule $\varphi$ má volné proměnné $x_1,\dots,x_n,y_1,\dots,y_k$ (pro nějaká $n,k$).
 
-\begin{definition}
+\begin{definition}[Definovaná množina s parametry]
     Mějme formuli $\varphi(\bar x,\bar y)$, kde $|\bar x|=n$ a $|\bar y|=k$, strukturu $\A$ v témž jazyce, a $k$-tici prvků $\bar b\in A^k$. \emph{Množina definovaná formulí $\varphi(\bar x,\bar y)$ s parametry $\bar b$ ve struktuře $\A$}, značíme $\varphi^{\A,\bar b}(\bar x,\bar y)$, je:
     $$
     \varphi^{\A,\bar b}(\bar x,\bar y)=\{\bar a\in A^n\mid\A\models\varphi[e(\bar x/\bar a,\bar y/\bar b)]\}

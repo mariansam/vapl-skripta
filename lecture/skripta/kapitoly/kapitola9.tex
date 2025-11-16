@@ -149,7 +149,7 @@ kde $y^k$ je zkratka za term $y\cdot y \cdot\ \cdots\ \cdot y$ (kde  $\cdot$ je 
 
 Podívejme se blíže na pojem \emph{izomorfismu struktur}, který zobecňuje izomorfismus grafů, vektorových prostorů, apod. Neformálně řečeno, struktury jsou \emph{izomorfní}, pokud se liší jen pojmenováním konkrétních prvků.
 
-\begin{definition}
+\begin{definition}[Izomorfismus struktur]
 Mějme struktury $\A,\B$ jazyka $L=\langle\mathcal R,\mathcal F\rangle$. \emph{Izomorfismus $\A$ a $\B$} (nebo `$\A$ \emph{na} $\B$') je bijekce $h\colon A\to B$ splňující následující vlastnosti:
 \begin{itemize}
     \item Pro každý ($n$-ární) funkční symbol $f\in\mathcal F$ a pro všechna $a_i\in A$ platí:
@@ -382,7 +382,7 @@ Začněme jednoduchým faktem:
 
 Z věty o kompaktnosti snadno získáme následující tvrzení, pomocí kterého lze ukázat neaxiomatizovatelnost např. konečných grafů, konečných grup, konečných těles.
 
-\begin{theorem}
+\begin{theorem}[Neaxiomatizovatelnost konečných modelů]
     Pokud má teorie libovolně velké konečné modely, potom má i nekonečný model. V tom případě není třída všech jejích konečných modelů axiomatizovatelná.
 \end{theorem}
 \begin{proof}
@@ -458,7 +458,7 @@ $S'=S\cup T'$ má model, neboť každá její konečná část má model: stač�
 
 Pro otevřenou axiomatizovatelnost existuje jednoduché sémantické kritérium: třída jejích modelů musí být uzavřená na podstruktury. Platí dokonce ekvivalence, dokážeme ale jen jednu implikaci (důkaz druhé je obtížnější).
 
-\begin{theorem}\label{theorem:open-axiomatizability}
+\begin{theorem}[Otevřená axiomatizovatelnost]\label{theorem:open-axiomatizability}
 Pokud je teorie $T$ otevřeně axiomatizovatelná, potom je každá podstruktura modelu $T$ také modelem $T$.   
 \end{theorem}
 

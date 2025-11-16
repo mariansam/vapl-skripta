@@ -321,7 +321,7 @@ Všimněte si, že při redukci položky přidáváme do tabla pouze položky ob
 
 Je-li teorie $T$ nekonečná, musíme ale být opatrnější. Mohli bychom nekonečně dlouho konstruovat tablo, a přitom se nikdy nedostat k redukci určité položky, nebo nikdy nepoužít některý z axiomů. Definujeme tedy konkrétní algoritmus pro konstrukci tabla, výsledku budeme říkat \emph{systematické tablo}. Myšlenka konstrukce je jednoduchá: střídáme krok redukce položky (zároveň na všech bezesporných větvích, které jí procházejí) a krokem použití axiomu. Položky procházíme po úrovních, a v rámci úrovně v pravolevém uspořádání. A axiomy teorie ve zvoleném očíslování.
 
-\begin{definition}
+\begin{definition}[Systematické tablo]
 Mějme položku $R$ a (konečnou nebo nekonečnou\footnote{Připomeňme, že $T$ je spočetná, neboť jazyk je (v celé kapitole) spočetný.}) teorii $T=\{\alpha_1,\alpha_2,\dots\}$. \emph{Systematické tablo} z teorie $T$ pro položku $R$ je tablo $\tau=\bigcup_{i\geq 0}\tau_i$, kde $\tau_0$ je jednoprvkové tablo s položkou $R$, a pro každé $i\geq 0$:
 
 \begin{itemize}
