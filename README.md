@@ -28,7 +28,7 @@ Vhodné do čtečky. Místy špatně vyrenderované. [PDF na Matfyz Wiki](https:
 `hlavicka.tex`:
 ```diff
 -\usepackage{a4wide}
-+\usepackage[top=0.8in,bottom=0.8in,left=0.7in,right=0.7in]{geometry}
++\usepackage[top=0.7in,bottom=0.7in,left=0.6in,right=0.6in]{geometry}
 ```
 
 ## Meme
